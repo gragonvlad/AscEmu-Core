@@ -839,8 +839,8 @@ struct TransportData
 // values used in .npc info command
 struct UnitFlagNames
 {
-    uint32 Flag;
-    const char* Name;
+    int32_t flag;
+    const char* name;
 };
 
 struct UnitDynFlagNames

@@ -399,8 +399,8 @@ bool ChatHandler::HandleNpcInfoCommand(const char* /*args*/, WorldSession* m_ses
     GreenSystemMessage(m_session, "UnitFlags: %u", unit_flags);
 
     for (uint32 i = 0; i < numflags; i++)
-        if ((unit_flags & UnitFlagToName[i].Flag) != 0)
-            GreenSystemMessage(m_session, "-- %s", UnitFlagToName[i].Name);
+        if ((unit_flags & UnitFlagToName[i].flag) != 0)
+            GreenSystemMessage(m_session, "-- %s", UnitFlagToName[i].name);
 
     uint32 dyn_flags = creature_target->GetUInt32Value(UNIT_DYNAMIC_FLAGS);
     GreenSystemMessage(m_session, "UnitDynamicFlags: %u", dyn_flags);
