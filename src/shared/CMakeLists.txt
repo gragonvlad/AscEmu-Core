@@ -40,6 +40,10 @@ set(sources
 )
 
 set(headers
+	# 2017
+	GlobalDefines.h
+	
+	# Legacy
 	Array.h
 	ascemu_getopt.h
     AscemuServerDefines.hpp

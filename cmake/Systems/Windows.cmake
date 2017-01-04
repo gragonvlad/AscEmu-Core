@@ -52,12 +52,12 @@ set(INSTALLED_DEPENDENCIES
     ${DEPENDENCY_DLLS}/libeay32.dll
 )
 
-if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
+if (${CMAKE_CXX_COMPILER_ID} STREQUAL Clang)
 	include(${CMAKE_SOURCE_DIR}/cmake/Compilers/Win/Clang.cmake)
-elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
+elseif (${CMAKE_CXX_COMPILER_ID} STREQUAL MSVC)
 	include(${CMAKE_SOURCE_DIR}/cmake/Compilers/Win/MSVC.cmake)
-elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+elseif (${CMAKE_CXX_COMPILER_ID} STREQUAL GNU)
     message(FATAL_ERROR "Compiler is not supported")
-elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Intel")
+elseif (${CMAKE_CXX_COMPILER_ID} STREQUAL Intel)
     message(FATAL_ERROR "Compiler is not supported")
 endif()
